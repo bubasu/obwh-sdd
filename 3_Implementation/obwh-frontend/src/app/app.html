@@ -1,0 +1,32 @@
+<main class="quiz-container">
+  <header>
+    <h1>Old Book Wisenheimer</h1>
+    <div class="status-bar">
+      <span class="round-info">Round: {{ round() }}</span>
+      <span class="timer" [class.low-time]="timer() < 10">Time: {{ timer() }}s</span>
+    </div>
+  </header>
+
+  @if (gameActive() && currentQuestion()) {
+    <section class="question-box">
+      <blockquote class="quote">
+        "{{ currentQuestion()?.quote }}"
+      </blockquote>
+
+      <div class="options-grid">
+        @for (option of currentQuestion()?.options; track option.id) {
+          <button class="option-btn" (click)="selectOption(option.id)">
+            <span class="title">{{ option.title }}</span>
+            <span class="author">({{ option.author }})</span>
+          </button>
+        }
+      </div>
+    </section>
+  } @else if (!gameActive() && lastResult()) {
+    <section class="result-screen">
+      <h2>Game Over!</h2>
+      <p>You reached Round {{ round() }}</p>
+      <button class="restart-btn" (click)="startNewGame()">Try Again</button>
+    </section>
+  }
+</main>
