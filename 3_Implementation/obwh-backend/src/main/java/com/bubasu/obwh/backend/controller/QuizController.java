@@ -1,4 +1,4 @@
-package com.obwh.backend.controller;
+package com.bubasu.obwh.backend.controller;
 
 import com.obwh.api.QuizApi;
 import com.obwh.model.QuoteQuestionResponse;
