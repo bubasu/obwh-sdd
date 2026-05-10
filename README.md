@@ -1,5 +1,7 @@
 # Old Book Wisenheimer (SDD)
 
+![Quiz](obwh-screencast.gif)
+
 A simple literature quiz about quotes and books.
 
 Built using an approach of Specification Driven Development (SDD).
@@ -9,6 +11,11 @@ Main ideas:
 - define terms like "Vision", "Product", "System", etc. and relations between those terms
 - use these terms in directory and file names, prompts, etc.
 - support iterative development, e.g., a Product Design moves towards the Product Vision in Story increments 
+
+Inspirations:
+- [How to Use a Spec-Driven Approach for Coding with AI](https://blog.jetbrains.com/junie/2025/10/how-to-use-a-spec-driven-approach-for-coding-with-ai/)
+- [Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
+- [Specification-Driven Development (SDD)](https://github.com/github/spec-kit/blob/main/spec-driven.md)
 
 ## Devlogs
 
