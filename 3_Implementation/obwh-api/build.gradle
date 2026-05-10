@@ -1,0 +1,36 @@
+plugins {
+    id 'java-library'
+    id 'org.openapi.generator'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.3.0'
+    implementation 'io.swagger.core.v3:swagger-annotations:2.2.20'
+    implementation 'org.openapitools:jackson-databind-nullable:0.2.6'
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir "${layout.buildDirectory.get().asFile}/generated/src/main/java"
+        }
+    }
+}
+
+openApiGenerate {
+    generatorName.set("spring")
+    inputSpec.set("$projectDir/src/main/resources/api.yaml")
+    outputDir.set("${layout.buildDirectory.get().asFile}/generated")
+    apiPackage.set("com.obwh.api")
+    modelPackage.set("com.obwh.model")
+    configOptions.set([
+            interfaceOnly: "true",
+            useSpringBoot3: "true",
+            useJakartaEe: "true"
+    ])
+}
+
+// Optional: Add a task for Angular generation if desired in this module
+// or create a separate one in obwh-frontend
+compileJava.dependsOn tasks.openApiGenerate
