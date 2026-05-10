@@ -1,6 +1,6 @@
 # Old Book Wisenheimer (SDD)
 
-![Quiz](obwh-screencast.gif)
+![Quiz](obwh-screenshot.jpg)
 
 A simple literature quiz about quotes and books.
 
