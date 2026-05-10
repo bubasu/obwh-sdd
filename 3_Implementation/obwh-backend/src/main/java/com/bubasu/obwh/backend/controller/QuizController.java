@@ -1,9 +1,9 @@
 package com.bubasu.obwh.backend.controller;
 
-import com.obwh.api.QuizApi;
-import com.obwh.model.QuoteQuestionResponse;
-import com.obwh.model.SolveRequest;
-import com.obwh.model.SolveResponse;
+import com.bubasu.obwh.api.QuizApi;
+import com.bubasu.obwh.model.QuoteQuestionResponse;
+import com.bubasu.obwh.model.SolveRequest;
+import com.bubasu.obwh.model.SolveResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -22,8 +22,8 @@ openApiGenerate {
     generatorName.set("spring")
     inputSpec.set("$projectDir/src/main/resources/api.yaml")
     outputDir.set("${layout.buildDirectory.get().asFile}/generated")
-    apiPackage.set("com.obwh.api")
-    modelPackage.set("com.obwh.model")
+    apiPackage.set("com.bubasu.obwh.api")
+    modelPackage.set("com.bubasu.obwh.model")
     configOptions.set([
             interfaceOnly: "true",
             useSpringBoot3: "true",
