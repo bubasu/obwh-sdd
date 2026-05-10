@@ -1,0 +1,28 @@
+### Start a new Quiz Round
+# This request initializes the game and returns a quote.
+POST http://localhost:8080/quiz/start
+Accept: application/json
+
+###
+
+### Solve a Quiz Question (Correct Answer)
+# This request simulates a player choosing the correct book.
+POST http://localhost:8080/quiz/solve
+Content-Type: application/json
+
+{
+  "selectedOptionId": "1",
+  "correctBookId": "1"
+}
+
+###
+
+### Solve a Quiz Question (Wrong Answer)
+# This request simulates a player choosing the wrong book.
+POST http://localhost:8080/quiz/solve
+Content-Type: application/json
+
+{
+  "selectedOptionId": "2",
+  "correctBookId": "1"
+}
